@@ -15,15 +15,17 @@
 
           .col-lg-10.mb-5
             .bg-white.tarjeta.bg-shadow1.p-4
-              .row.align-items-center
-                .col-lg-5.mb-4.mb-lg-0(data-aos="fade-right")
+              .row.align-items-center.justify-content-evenly
+                .col-lg-4.mb-4.mb-lg-0(data-aos="fade-right")
                   img(src='@/assets/curso/temas/t2/img1.png' alt='')
                 .col-lg-7.mb-4.mb-lg-0(data-aos="fade-left")  
-                  p.mb-0 #[b Por ejemplo] Se pueden transformar valores numéricos a categóricos, como las edades a mayor de edad o menor de edad. También se puede transformar un valor sin cambiar el tipo de dato, como lo sería pasar Edad a Año de nacimiento. Asimismo, los datos transformados pueden remplazar los datos que se encontraban en una columna o pueden ser colocados en nuevas columnas, como se aprecia en el siguiente ejemplo.
+                  p.mb-0 #[b Por ejemplo,] se pueden transformar valores numéricos a categóricos, como las edades a #[em mayor de edad] o #[em menor de edad]. También se puede transformar un valor sin cambiar el tipo de dato, como lo sería pasar #[em Edad] a #[em Año de nacimiento].
           
+          p.mb-5(data-aos="fade") Asimismo, los datos transformados pueden remplazar los datos que se encontraban en una columna o pueden ser colocados en nuevas columnas, como se aprecia en el siguiente ejemplo.
+
           .col-lg-10(data-aos="fade-down")
-            .titulo-sexto.color-acento-contenido
-              p.mb-0 #[b Tabla 2.] Ejemplo de transformación de datos
+            .titulo-sexto.color-acento-contenido.mb-3
+              p.mb-0 #[b Tabla 1.] Ejemplo de transformación de datos
             .tabla-a.color-primario
               table
                 thead
@@ -47,8 +49,8 @@
 
     .row.justify-content-center.mb-5
       .col-lg-7(data-aos="fade-down")
-        .titulo-sexto.color-acento-contenido
-          p.mb-0 #[b Tabla 3.] Rango de edades por segmento
+        .titulo-sexto.color-acento-contenido.mb-3
+          p.mb-0 #[b Tabla 2.] Rango de edades por segmento
         .tabla-a.color-primario
           table
             thead
@@ -100,7 +102,7 @@
         .bg-9.p-4.mb-4
           p #[b Por ejemplo], si se tienen la cantidad y el valor que representan ventas de artículos, se puede crear una nueva variable multiplicándolas, para obtener el total de venta para cada registro. 
           p.mb-0 O también, en caso de discriminar un valor con base en el impuesto, pero solamente se cuenta con el total y se sabe el porcentaje de impuesto, se pueden realizar estos cálculos y ponerlos en nuevas columnas.
-        p Son múltiples las acciones que se pueden realizar con la información base, la cual permite crear nuevas variables que facilitarán un mejor entendimiento de los datos. A continuación, se conocerán algunos ejemplos de cómo se pueden realizar estas transformaciones.
+        p Son múltiples las acciones que se pueden realizar con la información base, la cual permite crear nuevas variables que facilitarán un mejor entendimiento de los datos.
       .col-lg-3.mb-4.mb-lg-0.d-none.d-lg-block(data-aos="fade-left")
         img(src='@/assets/curso/temas/t2/img2.svg' alt='')
 
@@ -193,7 +195,7 @@
         p Ese filtro de clasificación se utilizó para crear una nueva columna, que en estos momentos permite determinar porcentualmente el número de automóviles viejos y nuevos, continuando con el siguiente filtro que se utilizará para descartar información; por ejemplo, si solo se desea trabajar con los modelos que representan una mayor presencia, se tendría que dejar los registros que se identifiquen como modelo nuevo ya que son el 58 % total de los datos.
         p Esto se puede lograr usando una lista de condicionales que responden si el auto es 
           b.bg-1 Modelo Nuevo o Modelo Viejo.
-          |  Luego, esta lista de condicionales es pasada al comando loc, el cual se encargará de devolver cada una de las posiciones donde, según la lista de condicionales, la condición haya sido verdadera.
+          |  Luego, esta lista de condicionales es pasada al comando #[em loc], el cual se encargará de devolver cada una de las posiciones donde, según la lista de condicionales, la condición haya sido verdadera.
 
     p.mb-4(data-aos="fade") Para obtener ese resultado, se debe ejecutar la siguiente línea de comandos, donde se debe determinar el filtro de registros que cumplan con el valor Modelo Nuevo de la columna ModeloTransformado.
 
@@ -228,7 +230,7 @@
           .titulo-segundo.color-acento-contenido(data-aos="fade") 
             h2 2.3 Agrupación
 
-          p.mb-4(data-aos="fade") La agrupación de datos se realiza cuando no es significativo el detalle de un registro sino su valor como grupo, ya sea su sumatoria o frecuencia. Esta se aplica para variables categóricas o variables numéricas no continuas. Al igual que con los casos anteriores, se va a utilizar como ejemplo el calcular el valor promedio por marca de auto en la tabla de vehículos. Revise el siguiente recurso para conocerlo.  
+          p.mb-4(data-aos="fade") La agrupación de datos se realiza cuando no es significativo el detalle de un registro sino su valor como grupo, ya sea su sumatoria o frecuencia. Esta se aplica para variables categóricas o variables numéricas no continuas. Al igual que con los casos anteriores, se va a utilizar como ejemplo el calcular el valor promedio por marca de auto en la tabla de vehículos, explicado a través del siguiente recurso:
 
           .tarjeta.bg-white.p-4.p-lg-5.mb-5(data-aos="fade-down") 
             PasosB.color-acento-botones
@@ -236,7 +238,7 @@
                 .col-lg-4.mb-4.mb-md-0
                   img(src='@/assets/curso/temas/t2/paso1.svg' alt='')
                 .col-lg-6
-                  p.mb-4 Lo primero que se debe hacer es usar la función groupby para agrupar los datos según la marca, y la función mean, para calcular el valor promedio de los autos según marca. Para obtener el resultado descrito anteriormente, se deben ejecutar las siguientes líneas de comando.
+                  p.mb-4 Lo primero que se debe hacer es usar la función #[em groupby] para agrupar los datos según la marca, y la función #[em mean], para calcular el valor promedio de los autos según marca. Para obtener el resultado descrito anteriormente, se deben ejecutar las siguientes líneas de comando.
                   .br-12.bg-7.w-fit.px-4.py-2.mb-4
                     p.mb-0.t-c6 marcas
                       span.tc-1 =
@@ -252,27 +254,33 @@
               .row.align-items-center.justify-content-center(titulo="")
                 .col-lg-4.mb-4.mb-md-0
                   .titulo-sexto.color-acento-contenido.mb-3
-                    p.mb-0 #[b Figura 1.] Valor medio de las marcas
+                    p.mb-0 Valor medio de las marcas
                   img(src='@/assets/curso/temas/t2/fig1.png' alt='Ejecución del comando para calcular el promedio del valor de las marcas.')
                 .col-lg-6
-                  p Como se puede ver en la Figura 1, la función groupby recibe el nombre de la columna por la cual se van a agrupar los datos; luego, se toma la columna correspondiente al valor y se le calcula el promedio.
+                  p Como se puede ver en la imagen, la función #[em #[b groupby]] recibe el nombre de la columna por la cual se van a agrupar los datos; luego, se toma la columna correspondiente al valor y se le calcula el promedio.
               .row.align-items-center.justify-content-center(titulo="")
                 .col-lg-4.mb-4.mb-md-0
                   img(src='@/assets/curso/temas/t2/paso3.svg' alt='')
                 .col-lg-6
                   p También se pueden agrupar valores numéricos, tanto discretos como continuos, en diferentes rangos. Para el siguiente ejemplo, se van a agrupar, por edades, en rangos de 10 años; para tal fin, se debe ejecutar el siguiente comando.
+                  .br-12.bg-7.w-fit.px-4.py-2.mb-4
+                    p.mb-0.t-c6 df.
+                      span.tc-2 groupby
+                      | (pd.cut(df['Edad'],np.arange(0,101,10))).
+                      span.tc-2 mean
+                      | ()['Valor']
               .row.align-items-center.justify-content-center(titulo="")
                 .col-lg-5.mb-4.mb-md-0
                   .titulo-sexto.color-acento-contenido.mb-3
-                    p.mb-0 #[b Figura 2.] Agrupación por edades de rangos de 10 años
+                    p.mb-0 Agrupación por edades de rangos de 10 años
                   img(src='@/assets/curso/temas/t2/fig2.png' alt='Agrupación por edades en rangos de 10 años.')
                 .col-lg-5
-                  p Como se muestra en la Figura 2, se hace uso nuevamente de la función groupby, pero en esta ocasión se hace en conjunto con la función cut, que divide el conjunto de datos en rangos dados por la función np.arange, la cual entrega valores entre 0 y 100, con un paso de 10.
+                  p Como se muestra en la imagen, se hace uso nuevamente de la función #[em groupby], pero en esta ocasión se hace en conjunto con la función #[em cut], que divide el conjunto de datos en rangos dados por la función #[em np.arange], la cual entrega valores entre 0 y 100, con un paso de 10.
               .row.align-items-center.justify-content-center(titulo="")
                 .col-lg-4.mb-4.mb-md-0
                   img(src='@/assets/curso/temas/t2/paso4.svg' alt='')
                 .col-lg-6 
-                  p El resultado final es procesado por la función mean, que se encarga de promediar los registros pertenecientes a cada  grupo. Es importante recordar que ya se han  realizado filtros anteriormente y solo se tienen edades desde los 15 a los 80 años, por lo que se ve que en los rangos de 0 a 10, 80 a 90 y 90 a 100 no existe información.
+                  p El resultado final es procesado por la función #[em mean], que se encarga de promediar los registros pertenecientes a cada  grupo. Es importante recordar que ya se han  realizado filtros anteriormente y solo se tienen edades desde los 15 a los 80 años, por lo que se ve que en los rangos de 0 a 10, 80 a 90 y 90 a 100 no existe información.
                   .bg-8.p-4
                     p.mb-0 Puede utilizar la agrupación para transformar los datos y obtener información general, que también le permita ir entendiendo mejor cada una de las variables con respecto a las demás.
 
@@ -285,12 +293,12 @@
 
     .row.justify-content-center.mb-4
       .col-lg-6.mb-4.mb-lg-0(data-aos="fade-right")
-        p Estas variables son datos ficticios que necesitan ser creados, ya que los algoritmos de entrenamiento o predicción solo trabajan con valores numéricos. En estos casos, se deben transformar los valores que sean categóricos a valores numéricos. Por ejemplo, si se usa la columna Marca y se desea transformar a numérica, se pueden crear columnas para cada marca, y luego asignar 1 si pertenece a esa marca o 0 si no pertenece.
-        p Para entender un poco mejor, observe el siguiente cuadro, donde se tiene la variable Género, con los valores F y M en la columna original; cuando se pasa a dummies, se crearía una columna nueva para cada dato diferente, si este coincide, se coloca el número 1, de lo contrario, se coloca un 0.
+        p Estas variables son datos ficticios que necesitan ser creados, ya que los algoritmos de entrenamiento o predicción solo trabajan con valores numéricos. En estos casos, se deben transformar los valores que sean categóricos a valores numéricos. Por ejemplo, si se usa la columna #[em Marca] y se desea transformar a numérica, se pueden crear columnas para cada marca, y luego asignar 1 si pertenece a esa marca o 0 si no pertenece.
+        p Para entender un poco mejor, observe el siguiente cuadro, donde se tiene la variable #[em Género], con los valores #[em F] y #[em M] en la columna original; cuando se pasa a #[em dummies], se crearía una columna nueva para cada dato diferente, si este coincide, se coloca el número 1, de lo contrario, se coloca un 0.
       .col-lg-6.mb-4.mb-lg-0(data-aos="fade-left")
-        img(src='@/assets/curso/temas/t2/img5.svg' alt='')
+        img(src='@/assets/curso/temas/t2/img5.svg' alt='El texto alternativo debe ser: Tablas que muestra cómo se traslada la información de la variable Género con valores F y M a columnas Dummies_F y Dummines_M.')
 
-    h5.mb-4(data-aos="fade") Siguiendo con el ejemplo de la variable Marca, se puede hacer usando el comando get_dummies, para obtener una tabla donde se indica a qué marca pertenece el auto; para tal fin, se debe hacer uso del siguiente comando. (Véase Figura 16)
+    h5.mb-4(data-aos="fade") Siguiendo con el ejemplo de la variable #[em Marca], se puede hacer usando el comando #[em get_dummies], para obtener una tabla donde se indica a qué marca pertenece el auto; para tal fin, se debe hacer uso del siguiente comando. (Véase Figura 16)
 
     .br-12.bg-7.w-fit.px-4.py-3.mb-4
       span.t-c dfdummy
@@ -305,10 +313,10 @@
     .row.justify-content-center.mb-5(data-aos="fade-down")
       .col-lg-8
         .titulo-sexto.color-acento-contenido
-          p.mb-0 #[b Figura 16.] Archivos unificados
+          p.mb-0 #[b Figura 16.] Columnas #[em Dummy] según la marca
         img(src='@/assets/curso/temas/t2/fig16.png' alt='Tabla de registro según la marca.')
     
-    p.mb-4(data-aos="fade") Luego, se toma esta tabla y se concatena a la tabla inicial, usando el comando concat. Para esto, se debe hacer uso de los siguientes comandos.
+    p.mb-4(data-aos="fade") Luego, se toma esta tabla y se concatena a la tabla inicial, usando el comando #[em concat]. Para esto, se debe hacer uso de los siguientes comandos.
 
     .row.justify-content-center.mb-4(data-aos="fade-down")
       .col-lg-8
@@ -323,11 +331,11 @@
             span.tc-3 1
             | )df
         .titulo-sexto.color-acento-contenido
-          p.mb-0 #[b Figura 17.] Columnas dummy concatenadas al conjunto de datos inicial
+          p.mb-0 #[b Figura 17.] Columnas #[em dummy] concatenadas al conjunto de datos inicial
         img(src='@/assets/curso/temas/t2/fig17.png' alt='Captura de pantalla en la que se muestra cómo se concatena la tabla anterior con los datos iniciales.')
 
     p(data-aos="fade") Como se puede observar en la Figura 17, la cantidad de columnas aumentó a 65, de las cuales 55 son las columnas #[em dummy] que se generaron; es allí donde se debe pensar si es conveniente usar esta columna para el análisis de los datos; como siempre, todo dependerá de los requerimientos del negocio.
-    h5.mb-4(data-aos="fade") Ahora, observe el mismo procedimiento, pero, esta vez, para la variable Género. El proceso es el mismo, solo debe cambiar por la columna Género.
+    h5.mb-4(data-aos="fade") Ahora, observe el mismo procedimiento, pero, esta vez, para la variable #[em Género]. El proceso es el mismo, solo debe cambiar por la columna #[em Género].
 
     .row.justify-content-center.mb-4(data-aos="fade-down")
       .col-lg-6
@@ -346,7 +354,7 @@
     .row.justify-content-center.mb-4(data-aos="fade-down")
       .col-lg-4
         .titulo-sexto.color-acento-contenido
-          p.mb-0 #[b Figura 18.] Columnas Dummy para el Género
+          p.mb-0 #[b Figura 18.] Columnas #[em Dummy] para el Género
         img(src='@/assets/curso/temas/t2/fig18.png' alt='Transformación de la variable Género a un valor numérico.')
 
     p(data-aos="fade") En este caso, se crearon dos columnas nuevas, lo que quiere decir que el número de columnas dependerá de la variabilidad que exista en cada una de las filas de las columnas categóricas que se quieran transformar a #[em dummy].
@@ -365,7 +373,7 @@
     .row.justify-content-center.mb-5(data-aos="fade-down")
       .col-lg-5
         .titulo-sexto.color-acento-contenido.mb-3
-          p.mb-0 #[b Tabla 4.] Discretización de datos
+          p.mb-0 #[b Tabla 3.] Discretización de datos
         .tabla-a.color-primario.tabla-4
           table
             tbody
@@ -414,8 +422,8 @@
 
     .row.align-items-center.mb-5
       .col-lg-6.mb-4.mb-lg-0(data-aos="fade-right")
-        p Previamente, se utilizó este método en la creación de nuevas columnas, donde convertimos un valor numérico discreto, como es el año del modelo, a una variable categórica, como es Modelo Nuevo o Modelo Viejo.
-        p Otra forma de discretizar los datos es utilizando etiquetas que identifiquen rangos de ciertas variables, como lo sería Menor de edad y Mayor de edad para el campo Edad; los menores de 18 años tomarían la primera etiqueta, el resto, la segunda etiqueta. (Véase Figura 19)
+        p Previamente, se utilizó este método en la creación de nuevas columnas, donde convertimos un valor numérico discreto, como es el año del modelo, a una variable categórica, como es #[em Modelo Nuevo] o #[em Modelo Viejo].
+        p Otra forma de discretizar los datos es utilizando etiquetas que identifiquen rangos de ciertas variables, como lo sería #[em Menor de edad] y #[em Mayor de edad] para el campo #[em Edad]; los menores de 18 años tomarían la primera etiqueta, el resto, la segunda etiqueta. (Véase Figura 19)
         h5 Para realizar este procedimiento, ejecute las siguientes líneas de comando.
       .col-lg-6.col-md-6.mb-4.mb-lg-0(data-aos="fade-left") 
         img(src='@/assets/curso/temas/t2/img6.svg' alt='' )
@@ -435,7 +443,7 @@
     .row.justify-content-center.mb-5
       .col-lg-8.mb-4.mb-lg-0(data-aos="fade")
         .titulo-sexto.color-acento-contenido
-          p.mb-0 #[b Figura 19.] Gráfica sin datos atípicos
+          p.mb-0 #[b Figura 19.] Discretización del campo Edad
         img(src='@/assets/curso/temas/t2/fig19.png' alt='Transformación de una variable numérica en una categórica; en este caso: mayor de edad o menor de edad.')
 
     p(data-aos="fade") La discretización de variables es muy útil en aprendizaje supervisado. El científico de datos puede decidir qué variables conviene que sean discretizadas antes de aplicar los modelos y cuáles pueden funcionar mejor de forma continua. Aquellas variables que puedan ser descritas, desde el punto de vista del algoritmo, en forma de intervalos son buenas candidatas a la discretización, es decir, aquellas que convenga describir en grupos (tales como bajo, medio y alto) podrían ser discretizadas.
@@ -466,7 +474,7 @@
       .col-lg-7.mb-4.mb-lg-0(data-aos="fade-left") 
         p Algunos algoritmos diferencian la importancia de ciertas columnas con base en la escala que tengan sus valores para poder generar un resultado, es por esto que es importante que todos los datos estén dentro de un mismo rango y tengan una misma desviación media.
         p El método que se implementará funciona de la siguiente manera: por ejemplo, se tienen dos columnas con 10 datos, estos con diferentes valores; para el valor 1, se puede decir que son rangos para el precio de un artículo; mientras que para el valor 2, se establece la representación de las unidades vendidas; claramente existirá una amplia diferencia en sus rangos.
-        p Para normalizar estos dos rangos, lo primero es determinar el valor máximo, que sería 1500 para la columna denominada valor 1, y 20, para la columna denominada valor 2. Posteriormente, se divide cada valor de la fila por el valor máximo, como se muestra a continuación
+        p Para normalizar estos dos rangos, lo primero es determinar el valor máximo, que sería 1500 para la columna denominada valor 1, y 20, para la columna denominada valor 2. Posteriormente, se divide cada valor de la fila por el valor máximo, como se muestra a continuación.
 
     .row.fondo3-t2.align-items-center.pt-3.mb-3
       .col-lg-12.col-12.px-lg-5.px-4
@@ -474,7 +482,7 @@
         .row.justify-content-center.mb-5
           .col-lg-12(data-aos="fade-down")
             .titulo-sexto.color-acento-contenido
-              p.mb-0 #[b Tabla 5.] Escalamiento de datos
+              p.mb-0 #[b Tabla 4.] Escalamiento de datos
             .tabla-a.color-primario
               table
                 thead

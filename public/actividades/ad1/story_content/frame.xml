@@ -75,6 +75,7 @@
           </option>
           <option name="settings" value="false" />
           <option name="fullScreenToggle" value="false" />
+          <option name="playbackSpeedControl" value="false" />
         </options>
       </optiongroup>
       <optiongroup name="bottombaroptions">
@@ -1327,15 +1328,15 @@
         <slidelink slideid="_player.6g8RcXIVtvA" displaytext="Nuevo Presentación de Microsoft PowerPoint" expand="true" type="slide">
           <links>
             <slidelink slideid="_player.6g8RcXIVtvA.6GrUdUpuerp" displaytext="Diapositiva sin título" expand="false" type="slide" />
-            <slidelink slideid="_player.6g8RcXIVtvA.64rZcxwdqXa" displaytext="El siguiente resultado es producto de usar el comando, entendiendo que df es un Dataframe (2033, 9)." expand="false" type="slide" />
-            <slidelink slideid="_player.6g8RcXIVtvA.6GcNrKhHuYL" displaytext="El siguiente resultado es producto de usar el comando, entendiendo que df es un Dataframe" expand="false" type="slide" />
+            <slidelink slideid="_player.6g8RcXIVtvA.64rZcxwdqXa" displaytext="El siguiente resultado es producto de usar el comando, entendiendo que df  es un Dataframe (2033, 9)." expand="false" type="slide" />
+            <slidelink slideid="_player.6g8RcXIVtvA.6GcNrKhHuYL" displaytext="El siguiente resultado es producto de usar el comando, entendiendo que df  es un Dataframe" expand="false" type="slide" />
             <slidelink slideid="_player.6g8RcXIVtvA.5dJg7QfsaCi" displaytext="Seleccione el comando correcto para importar la librería panda." expand="false" type="slide" />
             <slidelink slideid="_player.6g8RcXIVtvA.6pgX1xZSymS" displaytext="Una de librerías para el manejo de gráficos es:" expand="false" type="slide" />
             <slidelink slideid="_player.6g8RcXIVtvA.5xwlqv81Hdx" displaytext="Seleccione el comando que se utiliza para determinar los valores totales nulos para cada columna:" expand="false" type="slide" />
-            <slidelink slideid="_player.6g8RcXIVtvA.5vMRJaK2Y1n" displaytext="El comando df.describe() se utiliza para:" expand="false" type="slide" />
+            <slidelink slideid="_player.6g8RcXIVtvA.5vMRJaK2Y1n" displaytext="El comando df.describe()  se utiliza para:" expand="false" type="slide" />
             <slidelink slideid="_player.6g8RcXIVtvA.63sXm9ZZLRo" displaytext="Seleccione el comando para eliminar datos nulos teniendo en cuenta una columna" expand="false" type="slide" />
             <slidelink slideid="_player.6g8RcXIVtvA.5hCXfLz34NP" displaytext="El siguiente comando se utiliza para: sns.set_theme(style=&amp;quot;darkgrid&amp;quot;) ax = sns.countplot(x=&amp;quot;Genero&amp;quot;, data=df)" expand="false" type="slide" />
-            <slidelink slideid="_player.6g8RcXIVtvA.6WULrOlRSXM" displaytext="El comando sns.catplot(x = &amp;quot;Modelo&amp;quot;, data = df, kind = &amp;quot;box&amp;quot;, aspect = 1.5); permite visualizar un:" expand="false" type="slide" />
+            <slidelink slideid="_player.6g8RcXIVtvA.6WULrOlRSXM" displaytext="El comando sns.catplot (x = &amp;quot;Modelo&amp;quot;, data = df, kind = &amp;quot;box&amp;quot;, aspect = 1.5); permite visualizar un:" expand="false" type="slide" />
             <slidelink slideid="_player.6g8RcXIVtvA.6GE5dfCe83f" displaytext="Indique el comando correcto para eliminar registros duplicados." expand="false" type="slide" />
           </links>
         </slidelink>

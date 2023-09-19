@@ -2,7 +2,7 @@ export default {
   global: {
     componenteFormativo: 'Depurando los datos',
     descripcionCurso:
-      'En este componente formativo, se describe la importancia de la limpieza y transformación de los datos, además, se dan a conocer los pasos necesarios para realizar estos procesos; por otro lado, se reconocerán los comandos de las principales librerías para el análisis y manipulación de los datos del lenguaje de programación <em>Python</em>.',
+      'En este componente formativo, se describe la importancia de la limpieza y transformación de los datos, además, se dan a conocer los pasos necesarios para realizar estos procesos; por otro lado, se reconocerán los comandos de las principales librerías para el análisis y manipulación de los datos del lenguaje de programación Python.',
     imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.png'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [

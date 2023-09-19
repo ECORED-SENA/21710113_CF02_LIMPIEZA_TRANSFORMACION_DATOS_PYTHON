@@ -11,7 +11,7 @@
       .col-lg-12.col-12.px-lg-5.px-4
         .row.justify-content-center.mb-4
 
-          p.mb-4(data-aos="fade") Este proceso consiste en detectar, corregir o eliminar registros corruptos o inexactos de un conjunto tablas o base de datos; dentro de dicha limpieza, se identifican las partes incompletas, incorrectas, inexactas o irrelevantes de los datos, para su posterior sustitución, modificación o eliminación.
+          p.mb-4(data-aos="fade") Este proceso implica detectar, corregir o eliminar registros corruptos o inexactos de un conjunto de tablas o una base de datos. Durante esta limpieza, se identifican las partes incompletas, incorrectas, inexactas o irrelevantes de los datos para su posterior sustitución, modificación o eliminación.
 
           .row.align-items-center.justify-content-center.mb-4
             .col-lg-3.col-md-8.mb-4.mb-lg-0(data-aos="fade-right")
@@ -46,7 +46,7 @@
                   h5.bg-num.mb-lg-0 5
                   p.mb-0 #[b Caracteres especiales:] campos que vienen acompañados de espacios, asteriscos, puntos y cualquier caracter que no corresponda a este tipo de datos.
           
-          p.mb-4(data-aos="fade") Para entender mejor este tema, se trabajará con un ejemplo que contribuirá a entender a qué se enfrenta alguien cuando recolecta información desde diversas fuentes de información; para conocerlo, revise con atención el recurso propuesto:
+          p.mb-4(data-aos="fade") Para entender mejor este tema, en el siguiente video se expondrá un ejemplo que contribuirá a comprender a qué se enfrenta alguien cuando recolecta información desde diversas fuentes de información.
 
           figure(data-aos="fade-down")
             .video
@@ -58,7 +58,7 @@
         .cajon-b.color-acento-contenido.py-2.mb-2
           p.mb-0 Si bien no se conocen todas las numerosas anomalías que se pueden encontrar, es importante tener claridad en los tipos y la estructura de datos de la colección, de tal manera que se puedan quitar, modificar o eliminar; lo cierto es que los datos deben mantener siempre una consistencia de lo que representan.
         p Es importante tener en cuenta que, para iniciar con el proceso de limpieza de datos y búsqueda de inconsistencias, se debe realizar la importación de librerías, proceso que se explicó en el componente anterior; pues es necesario trabajar con datos unificados en los tres tipos de archivos de diferentes formatos, para posteriormente guardarlos en un archivo de formato CSV, sobre el cual se basará el desarrollo de este componente. 
-          b Observe la Figura 1:
+          b Observe la siguiente figura:
       .col-lg-3.mb-4.mb-lg-0.d-none.d-lg-block(data-aos="fade-left")
         .bg-9.h-100.d-flex.justify-content-center.align-items-center
           img(src='@/assets/curso/temas/t1/img3.svg' alt='' style="width: 150px;")
@@ -78,12 +78,12 @@
     .titulo-segundo.color-acento-contenido(data-aos="fade") 
       h2 1.1 Describir los datos
 
-    p.mb-4(data-aos="fade") Existen muchas formas de describir los datos, pero normalmente se tienen en cuenta las siguientes, haga clic en cada botón para conocerlas:
+    p.mb-4(data-aos="fade") Existen muchas formas de describir los datos, pero normalmente se tienen en cuenta estos aspectos:
 
     .row.justify-content-center(data-aos="fade-down")
       .col-lg-4.mb-4
         .bg-1.text-center.p-4.h-100
-          h5 Cantidad de Datos
+          h5 Cantidad de datos
           p.mb-0 Número de registros, campos y tablas seleccionadas en la etapa anterior.
       .col-lg-4.mb-4
         .bg-3.text-center.p-4.h-100
@@ -125,12 +125,12 @@
                 h5 Para ver la cantidad de valores nulos del conjunto de datos que se ha venido trabajando, es necesario utilizar el siguiente comando.
                 .br-12.bg-7.w-fit.px-4.py-2.mb-3
                   span.t-c df.
-                    span.tc-2 isnull 
+                    span.tc-2 isnull
                     | ( ).
                     span.tc-2 sum
                     | ( )
-                p Este comando permitirá detectar y contar cada uno de los valores nulos encontrados en cada columna de los datos que se están estudiando. 
-                  b (Véase Figura 2)               
+                p Este comando permitirá detectar y contar cada uno de los valores nulos encontrados en cada columna de los datos que se están estudiando, 
+                  b tal como se muestra en la siguiente figura.        
             .col-lg-4.mb-4.mb-lg-0.d-none.d-lg-block(data-aos="fade-left")
               img(src='@/assets/curso/temas/t1/img4.svg' alt='')
 
@@ -143,7 +143,7 @@
           h4 Es importante tener en cuenta que: 
           p.mb-4 Una salida rápida para la solución de valores nulos puede ser eliminar todas las filas donde se presente un valor nulo en cualquiera de las columnas, pero observe que, en la Figura 2, la variable color presenta un número alto de valores nulos, de manera que, al realizar la eliminación con esa técnica, se estaría descartando mucha información importante.
           h4 Pero, ¿cómo determinar lo que se considera mucha información?
-          p Para responder a esta pregunta, es necesario realizar el cálculo porcentual de los valores nulos con respecto al total de registros; para este procedimiento, debe contar todos los valores nulos y dividirlos sobre el total; utilice el siguiente comando para obtener ese resultado
+          p Para responder a esta pregunta, es necesario realizar el cálculo porcentual de los valores nulos con respecto al total de registros. Este procedimiento, debe contar todos los valores nulos y dividirlos sobre el total; utilice el siguiente comando para obtener ese resultado
           
           .br-12.bg-7.w-fit.px-4.py-2.mb-4
             span.t-c porcentaje 
@@ -329,7 +329,7 @@
             span.tc-2 ravel
             | ( )
 
-    p.mb-4(data-aos="fade") Lo que realizan estos métodos es revisar, dentro de la columna edad, los valores que se encuentran vacíos y reemplazarlos con el método seleccionado; para este caso, el método que se utilizará es el de k vecinos. Después de ejecutar el método para k vecinos y visualizar los resultados con el comando df.info(), se obtiene la siguiente información.
+    p.mb-4(data-aos="fade") Lo que realizan estos métodos es revisar, dentro de la columna edad, los valores que se encuentran vacíos y reemplazarlos con el método seleccionado; para este caso, el método que se utilizará es el de k vecinos. Después de ejecutar el método para k vecinos y visualizar los resultados con el comando #[em df.info()], se obtiene la siguiente información.
 
     .row.align-items-center.justify-content-between.mb-4
       .col-lg-4.col-md-8.mb-4.mb-lg-0(data-aos="fade-right")
@@ -345,7 +345,7 @@
             .col-md-10
               p.mb-0 #[b Recuerde que en la imputación de los datos] es importante conocer muy bien el comportamiento de las variables; no se escoge un método u otro simplemente por gusto, aquí se deben tener en cuenta factores como la variabilidad de los datos o los valores permitidos reales que se puedan asignar cuando se habla de imputación de valor fijo.  
 
-    p(data-aos="fade") Ya terminado el proceso del tratamiento de datos nulos, como se observa en la Figura 4, en la que todas las columnas quedaron con un total de 2993, de los 3000 registros con que se empezó, y una columna menos, que tenía mucha información faltante. Ahora, se procede con la búsqueda de datos sucios.
+    p(data-aos="fade") Ya terminado el proceso del tratamiento de datos nulos, ahora, se procede con la búsqueda de datos sucios. 
 
 
     Separador
@@ -362,8 +362,8 @@
               img(src='@/assets/curso/temas/t1/img7.png' alt='')
             .col-lg-9.mb-4.mb-lg-0(data-aos="fade-left")  
               .bg-9.tarjeta.bg-shadow2.p-4
-                p Cuando un dato es erróneo o inconsistente se le llama dato sucio, este tipo de dato es mucho más difícil de encontrar, pues estos pueden derivar de errores generados al momento de ser registrados. Para estos casos, existen métodos preventivos, que minimizan la cantidad de datos sucios, ya que los procesos correctivos, y en especial la limpieza de datos, suelen ser muy costosos y laboriosos.
-                h5 Para ahondar de manera detallada en este proceso, revise con atención el recurso propuesto:
+                p Cuando un dato es erróneo o inconsistente se le llama dato sucio. Este tipo de dato es mucho más difícil de encontrar, pues estos pueden derivar de errores generados al momento de ser registrados. Para estos casos, existen métodos preventivos, que minimizan la cantidad de datos sucios, ya que los procesos correctivos, y en especial la limpieza de datos, suelen ser muy costosos y laboriosos.
+                h5 Para ahondar de manera detallada en este proceso, se invita a visualizar el siguiente recurso:
 
           figure(data-aos="fade-down")
             .video
@@ -380,7 +380,7 @@
     .row.justify-content-center.align-items-center.mb-4
       .col-lg-7.mb-4.mb-lg-0(data-aos="fade-right")
         p Cuando se registra un dato cuyos valores son muy diferentes a las observaciones del mismo grupo de datos, se le llama dato atípico. Este tipo de dato se diferencia de los datos nulos y los datos sucios porque existe y no es consecuencia de un error en el registro o compilación de datos.
-        p Un valor atípico puede ser indicativo de que el dato pertenece a una población diferente del resto de las muestras establecidas. Normalmente, son excluidos del análisis debido a que distorsionan los resultados. Para valores numéricos, el método más impartido académicamente, por su sencillez y resultados, es el test de Tukey, que toma como referencia la diferencia entre el primer cuartil y el tercer cuartil de los datos.
+        p Un valor atípico puede ser indicativo de que el dato pertenece a una población diferente del resto de las muestras establecidas. Normalmente, son excluidos del análisis debido a que distorsionan los resultados. Para valores numéricos, el método más impartido académicamente, por su sencillez y resultados, es el #[em test] de #[em Tukey], que toma como referencia la diferencia entre el primer cuartil y el tercer cuartil de los datos.
         .bg-3.tarjeta.p-4
           h5 Una forma de visualizar este test es usando el diagrama de caja, el cual se genera usando el siguiente comando:
           .br-12.bg-7.w-fit.px-4.py-2.mb-3
@@ -434,7 +434,7 @@
           p.mb-0 #[b Figura 6.] Eliminación de registros atípicos
         img(src='@/assets/curso/temas/t1/fig6.png' alt='Comando en el que se muestran los registros sin datos atípico.' style="width: 295px;")
       .col-lg-6.mb-4.mb-lg-0(data-aos="fade-left") 
-        p Si se grafica nuevamente el resultado, se obtiene el siguiente, aquí ya no se observan aquellos valores que se han descartado.
+        p Entonces, con base en lo anterior, si se grafica nuevamente el resultado, se obtiene lo siguiente, aquí ya no se observan aquellos valores que se han descartado.
 
     .row.align-items-center.mb-5
       .col-lg-6.col-md-6.mb-4.mb-lg-0(data-aos="fade")
@@ -442,11 +442,11 @@
           p.mb-0 #[b Figura 7.] Gráfica sin datos atípicos
         img(src='@/assets/curso/temas/t1/fig7.png' alt='Representación visual en la que ya no existen variaciones atípicas. Solo aparece la columna azul constante del Modelo.')
 
-    p.mb-4(data-aos="fade") Para entender mejor el tema, se realizará el mismo procedimiento para las variables Edad e Hijos. Para obtener los resultados gráficos, se deben ejecutar los siguientes comandos:
+    p.mb-4(data-aos="fade") Para entender mejor el tema, se realizará el mismo procedimiento para las variables #[em Edad e Hijos]. Para obtener los resultados gráficos, se deben ejecutar los siguientes comandos:
 
     .row.justify-content-center.mb-3
       .col-lg-6.mb-4.b-p-r(data-aos="fade-right")
-        h4 Comando
+        h4 Comando para la variable Edad
         .br-12.bg-7.w-fit.px-4.py-2.mb-4
           span.t-c sns.
             span.tc-2 catplot
@@ -469,7 +469,7 @@
           p.mb-0 #[b Figura 8.] Datos atípicos para edad
         img(src='@/assets/curso/temas/t1/fig8.png' alt='Representación visual en la que se presentan datos atípicos en la columna 160 años.')
       .col-lg-6.mb-4.ps-lg-5(data-aos="fade-left") 
-        h4 Comando
+        h4 Comando para la variable Hijos
         .br-12.bg-7.w-fit.px-4.py-2.mb-4
           span.t-c sns.
             span.tc-2 catplot
@@ -499,9 +499,9 @@
             .col-lg-4
               img(src='@/assets/curso/temas/t1/img9.svg' alt='')
             .col-lg-8
-              h5 Para ambos campos, se observan datos atípicos (Véanse Figuras 8 y 9), por lo que se procederá a eliminarlos, estableciendo un rango en el que solo se permiten los datos que cumplan la condición.
-              p Los siguientes comandos ayudan con el procedimiento para descartar esos registros atípicos. En cuanto a la variable edad, sólo se dejarán registros que estén en el rango de 15 a 80 años, y para hijos, datos que sean menores a 5. 
-              p.mb-0 También se deben quitar las columnas que no se vayan a utilizar; en este caso, la que se creó automáticamente al unificar los archivos, llamada Unnamed: 0 y la columna id. Para conocer dichos comandos, revise con atención el siguiente contenido:
+              h5 Para ambos campos, se observan datos atípicos, por lo que se procederá a eliminarlos, estableciendo un rango en el que solo se permiten los datos que cumplan la condición.
+              p Los siguientes comandos ayudan con el procedimiento para descartar esos registros atípicos. En cuanto a la variable #[em edad], sólo se dejarán registros que estén en el rango de 15 a 80 años, y para #[em hijos], datos que sean menores a 5. 
+              p.mb-0 También se deben quitar las columnas que no se vayan a utilizar; en este caso, la que se creó automáticamente al unificar los archivos, llamada #[em Unnamed: 0 ]y la columna #[em id]; tal como se presenta a continuación:
 
     .row.justify-content-center.mb-5(data-aos="fade-down") 
       .col-lg-10.mb-2
@@ -588,7 +588,7 @@
           p.mb-0 #[b Figura 10.] Comandos para eliminar datos atípicos
         img(src='@/assets/curso/temas/t1/fig10.png' alt='Captura de pantalla de la ejecución de comandos para la eliminación de datos atípicos.')
 
-    p.mb-4(data-aos="fade") Para el caso de las variables categóricas, como Marca, se puede usar un diagrama de frecuencia, el cual se puede generar usando el siguiente comando:
+    p.mb-4(data-aos="fade") Para el caso de las variables categóricas, como #[em Marca], se puede usar un diagrama de frecuencia, el cual se puede generar usando el siguiente comando:
     
     .br-12.bg-7.w-fit.px-4.py-2.mb-5
       span.t-c6 plot 
@@ -616,7 +616,7 @@
           p.mb-0 #[b Figura 11.] Histograma de frecuencias por marca
         img(src='@/assets/curso/temas/t1/fig11.png' alt='Diagrama de frecuencias o representación gráfica de barras por marcas, en este caso, de automóviles.')
       .col-lg-4.mb-4.mb-lg-0(data-aos="fade-left") 
-        p Como se puede ver en la Figura 11, se seleccionó la columna Marca para este ejemplo, y el resultado es que la mayoría de los autos son de la marca Ford, y muy pocos, de las marcas Foose, Daihatsu, Tesla, Citroen, entre otras.
+        p Como se puede ver en la Figura 11, se seleccionó la columna #[em Marca] para este ejemplo, y el resultado es que la mayoría de los autos son de la marca Ford, y muy pocos, de las marcas Foose, Daihatsu, Tesla, Citroën, entre otras.
         p Si se desean eliminar los datos atípicos de esta columna, se debe establecer una cantidad mínima de casos, para filtrar aquellas categorías que no son frecuentes. Para este filtro, se usará un mínimo de 10 repeticiones, en cuyo caso aquellas marcas que tengan un número inferior de repeticiones serán consideradas como datos atípicos.
 
     .row.align-items-center.mb-5
@@ -625,8 +625,8 @@
           p.mb-0 #[b Figura 12.] Marcas cuya frecuencia sea menor de 10
         img(src='@/assets/curso/temas/t1/fig12.png' alt='Captura de pantalla en el que se muestra la ejecución del comando para frecuencias mejores de 10.')
       .col-lg-6.mb-4.mb-lg-0(data-aos="fade-left") 
-        p Como se muestra en la Figura 12, haciendo uso de la función value_counts, se obtiene la frecuencia de cada valor categórico dentro de la columna Marca y se asigna el valor True a aquellas cuyo conteo es menor que 10 y False a aquellas cuyo conteo sea mayor o igual que 10. Luego, se asigna a la variable condición.
-        p Ya que lo que interesa es la lista de marcas que cumplan la condición, se extraen de la lista condición aquellas marcas cuyo valor asignado fue True y se asignan a la variable filtrarmarcas.
+        p Como se muestra en la Figura 12, haciendo uso de la función #[em value_counts], se obtiene la frecuencia de cada valor categórico dentro de la columna #[em Marca] y se asigna el valor #[em True] a aquellas cuyo conteo es menor que 10 y #[em False] a aquellas cuyo conteo sea mayor o igual que 10. Luego, se asigna a la variable #[em condición].
+        p Ya que lo que interesa es la lista de marcas que cumplan la #[em condición], se extraen de la lista #[em condición] aquellas marcas cuyo valor asignado fue #[em True] y se asignan a la variable #[em filtrarmarcas].
 
     .row.align-items-center.mb-5
       .col-lg-6.col-md-7.mb-4.mb-lg-0(data-aos="fade-right")
@@ -634,7 +634,7 @@
           p.mb-0 #[b Figura 13.] Filtrado de marcas con menos de 10 registros
         img(src='@/assets/curso/temas/t1/fig13.png' alt='Resultado de las marcas que tienen menos de 10 registros. Entre estas se encuentran Honda, Lotus, Mitsubishi, entre otras.')
       .col-lg-6.mb-4.mb-lg-0(data-aos="fade-left") 
-        p.mb-4 Entonces, haciendo uso de la función isin, se filtran todas aquellas filas cuya marca se encuentre en lista filtrarmarcas, dejando solo aquellas que no se encuentran en la lista de filtrado, usando el comando:
+        p.mb-4 Entonces, haciendo uso de la función #[em isin], se filtran todas aquellas filas cuya marca se encuentre en lista #[em filtrarmarcas], dejando solo aquellas que no se encuentran en la lista de filtrado, usando el comando:
         .br-12.bg-7.w-fit.px-4.py-2.mb-4
           span.t-c6 df[
             span.tc-1 ~

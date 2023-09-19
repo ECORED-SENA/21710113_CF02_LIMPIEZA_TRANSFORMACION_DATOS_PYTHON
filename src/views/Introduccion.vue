@@ -9,7 +9,7 @@
           i.fas.fa-info
       h1 Introducción
     
-    p.mb-4(data-aos="fade") La limpieza de datos implica observar más de cerca los problemas en los datos que se han seleccionado para incluir en un análisis determinado. En este componente se brindarán los elementos necesarios para utilizar las principales librerías de #[em Python], indispensables para la limpieza y transformación de los datos. El siguiente video expone a modo general en qué consiste la limpieza de datos.
+    p.mb-4(data-aos="fade") La limpieza de datos implica observar más de cerca los problemas en los datos que se han seleccionado para incluir en un análisis determinado. En este componente se brindarán los elementos necesarios para utilizar las principales librerías de Python, indispensables para la limpieza y transformación de los datos. El siguiente video expone a modo general en qué consiste la limpieza de datos.
 
     figure(data-aos="fade-down")
       .video
