@@ -64,7 +64,7 @@
                 td Menor de edad
                 td A
               tr
-                td 12, 1
+                td 12, 15
                 td Mayor de edad
                 td B
               tr
@@ -80,13 +80,9 @@
                 td 40-50
                 td E
               tr
-                td 42, 43
-                td 40-50
-                td F
-              tr
                 td 
                 td 50-60
-                td E
+                td F
               tr
                 td 62, 63, 65
                 td 60-70
@@ -379,7 +375,7 @@
             tbody
               tr
                 td.column-20 Respuesta
-                td Variable descreta
+                td Variable discreta
               tr
                 td 0
                 td Muy bajo

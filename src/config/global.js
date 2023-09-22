@@ -140,7 +140,7 @@ export default {
       {
         icono: 'fas fa-file-pdf',
         titulo: 'Descargar PDF',
-        download: 'downloads/prueba.pdf',
+        download: 'downloads/CF02_21710113_DU.zip',
       },
       {
         icono: 'fas fa-download',
@@ -182,7 +182,8 @@ export default {
       referencia:
         'InteractiveChaos. (2022). <em>Agrupaciones en dataframes</em>.',
       tipo: 'Página Web',
-      link: 'https://pandas.pydata.org/pandas-docs/version/1.4.2/pandas.pdf',
+      link:
+        'https://interactivechaos.com/es/manual/tutorial-de-pandas/agrupaciones-en-dataframes',
     },
   ],
   glosario: [
