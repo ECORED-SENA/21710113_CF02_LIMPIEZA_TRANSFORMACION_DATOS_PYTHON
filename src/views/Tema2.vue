@@ -127,7 +127,7 @@
       .col-lg-5.mb-4.mb-lg-0(data-aos="fade-right")
         .bg-4.h-100
           .row 
-            .col-lg-4
+            .col-lg-4.col-6
               img(src='@/assets/curso/temas/t2/img3.svg' alt='')
             .col-lg-8.p-4.ps-lg-3
               h5 El filtrado de datos se utiliza cuando se desea retirar o clasificar, del conjunto de datos, aquellos registros que cumplan ciertas condiciones.      
@@ -139,8 +139,8 @@
 
     .row.mb-5
       .col-lg-7.mb-4.mb-lg-0(data-aos="fade-right")
-        .br-12.bg-7.w-fit.px-4.py-2.mb-4.h-100.d-flex.justify-content-center.flex-lg-column
-          p.mb-0.t-c6 total_rango_modelo 
+        .br-12.bg-7.w-fit.px-4.py-2.mb-4.h-100.d-lg-flex.justify-content-center.flex-lg-column
+          p.mb-lg-0.mb-1.t-c6 total_rango_modelo 
             span.tc-1 = 
             | df[‘ModeloTransformado’].
             span.tc-2 groupby 
@@ -188,19 +188,25 @@
           p.mb-0 #[b Figura 14.] Gráfica porcentual variable ModeloTransformado
         img(src='@/assets/curso/temas/t2/fig14.png' alt='Gráfica, tipo torta, en la que se presenta que el modelo nuevo equivale al 58 % y el viejo, al 42 %.')
       .col-lg-5.mb-4.mb-lg-0(data-aos="fade-left") 
-        p Ese filtro de clasificación se utilizó para crear una nueva columna, que en estos momentos permite determinar porcentualmente el número de automóviles viejos y nuevos, continuando con el siguiente filtro que se utilizará para descartar información; por ejemplo, si solo se desea trabajar con los modelos que representan una mayor presencia, se tendría que dejar los registros que se identifiquen como modelo nuevo ya que son el 58 % total de los datos.
+        p Ese filtro de clasificación se utilizó para crear una nueva columna, que en estos momentos permite determinar porcentualmente el número de automóviles viejos y nuevos, continuando con el siguiente filtro que se utilizará para descartar información; por ejemplo, si solo se desea trabajar con los modelos que representan una mayor presencia, se tendría que dejar los registros que se identifiquen como modelo, nuevo ya que son el 58 % total de los datos.
         p Esto se puede lograr usando una lista de condicionales que responden si el auto es 
           b.bg-1 Modelo Nuevo o Modelo Viejo.
           |  Luego, esta lista de condicionales es pasada al comando #[em loc], el cual se encargará de devolver cada una de las posiciones donde, según la lista de condicionales, la condición haya sido verdadera.
 
     p.mb-4(data-aos="fade") Para obtener ese resultado, se debe ejecutar la siguiente línea de comandos, donde se debe determinar el filtro de registros que cumplan con el valor Modelo Nuevo de la columna ModeloTransformado.
 
-    .br-12.bg-7.w-fit.px-4.py-2.mb-4(data-aos="fade")
+    .br-12.bg-7.w-fit.px-4.py-2.mb-4.d-lg-block.d-none(data-aos="fade")
       span.t-c filtros
         span.tc-1 =
         | df[‘ModeloTransformado’]
         span.tc-1 ==
         | ‘Modelo Nuevo’
+    .br-12.bg-7.w-fit.px-4.py-2.mb-4.d-lg-none.d-block(data-aos="fade")
+      span.t-c filtros
+        span.tc-1 =
+        | df[‘ModeloTransformado’]
+        span.tc-1 == 
+        | ‘Modelo Nuevo’    
 
     p.mb-4(data-aos="fade") Y para descartar el resto de los datos, se debe ejecutar el filtro dentro de la colección de los datos de la siguiente manera.
 
@@ -259,10 +265,16 @@
                   img(src='@/assets/curso/temas/t2/paso3.svg' alt='')
                 .col-lg-6
                   p También se pueden agrupar valores numéricos, tanto discretos como continuos, en diferentes rangos. Para el siguiente ejemplo, se van a agrupar, por edades, en rangos de 10 años; para tal fin, se debe ejecutar el siguiente comando.
-                  .br-12.bg-7.w-fit.px-4.py-2.mb-4
+                  .br-12.bg-7.w-fit.px-4.py-2.mb-4.d-lg-block.d-none
                     p.mb-0.t-c6 df.
                       span.tc-2 groupby
                       | (pd.cut(df['Edad'],np.arange(0,101,10))).
+                      span.tc-2 mean
+                      | ()['Valor']
+                  .br-12.bg-7.w-fit.px-3.py-2.mb-4.d-lg-none.d-block
+                    p.mb-0.t-c6 df.
+                      span.tc-2 groupby
+                      | (pd.cut(df['Edad'],np.arange (0,101,10))).
                       span.tc-2 mean
                       | ()['Valor']
               .row.align-items-center.justify-content-center(titulo="")
@@ -445,8 +457,10 @@
     p(data-aos="fade") La discretización de variables es muy útil en aprendizaje supervisado. El científico de datos puede decidir qué variables conviene que sean discretizadas antes de aplicar los modelos y cuáles pueden funcionar mejor de forma continua. Aquellas variables que puedan ser descritas, desde el punto de vista del algoritmo, en forma de intervalos son buenas candidatas a la discretización, es decir, aquellas que convenga describir en grupos (tales como bajo, medio y alto) podrían ser discretizadas.
     h5.mb-4(data-aos="fade") Para visualizar todas las variables discretas, se debe ejecutar el siguiente comando, que permitirá ver las columnas categóricas nuevas que se obtuvieron desde una variable numérica.
 
-    .br-12.bg-7.w-fit.px-4.py-3.mb-4(data-aos="fade")
+    .br-12.bg-7.w-fit.px-4.py-3.mb-4.d-lg-block.d-none(data-aos="fade")
       span.t-c df [ [‘ModeloTransformado’,’Rango_Edad’,’EdadDiscreta’]]
+    .br-12.bg-7.w-fit.px-4.py-3.mb-4.d-lg-none.d-block(data-aos="fade")
+      span.t-c df [ [‘ModeloTransformado’,’Rango_Edad’, ’EdadDiscreta’]]  
 
     p.mb-4 Este comando selecciona solo las columnas que se coloquen dentro de dobles corchetes. En este caso, se usa para visualizar las nuevas variables categóricas, pero puede ser utilizado para ver un conjunto de columnas cualquiera. 
       b (Véase Figura 20)
@@ -455,7 +469,7 @@
       .col-lg-4.mb-4.mb-lg-0(data-aos="fade")
         .titulo-sexto.color-acento-contenido.mb-3
           p.mb-0 #[b Figura 20.] Variables discreta
-        img(src='@/assets/curso/temas/t2/fig20.png' alt='Ejemplo de columnas categóricas nuevas que se obtienen desde una variable numérica.')
+        img.borde-img(src='@/assets/curso/temas/t2/fig20.jpg' alt='Ejemplo de columnas categóricas nuevas que se obtienen desde una variable numérica.')
 
 
     Separador
@@ -614,7 +628,7 @@
         
     .row.mb-5
       .col-lg-8.mb-4.mb-lg-0(data-aos="fade-right")
-        .br-12.bg-7.px-4.px-lg-5.py-2.mb-4.h-100.d-flex.justify-content-center.flex-lg-column
+        .br-12.bg-7.px-3.px-lg-5.py-2.mb-4.h-100.d-lg-flex.justify-content-center.flex-lg-column.d-lg-block.d-none
           p.mb-0.t-c6 df_max
             span.tc-1 =
             | df [ [‘Modelo’,’Valor’, ‘Hijos’, ‘Edad’] ]
@@ -635,6 +649,27 @@
           p.mb-0.t-c6 
             spanspan.tc-2 display
             | (df_max)
+        .br-12.bg-7.px-3.px-lg-5.py-2.mb-4.h-100.d-lg-none.d-block
+          p.mb-0.t-c6 df_max
+            span.tc-1 =
+            | df [ [‘Modelo’,’Valor’, ‘Hijos’, ‘Edad’] ]
+          p.mb-0.t-c6 
+            span.tc-1 for 
+            | column 
+            span.tc-1 in 
+            | df_max.columns:
+          p.mb-0.t-c6 df_max[column] 
+            span.tc-1 =
+            | df_max[column]
+            span.tc-1 /
+            | df_max[column].
+            span.tc-2 abs
+            | ( ).
+            span.tc-2 max
+            | ( )
+          p.mb-0.t-c6 
+            spanspan.tc-2 display
+            | (df_max)    
       .col-lg-4.col-md-7.mb-4.mb-lg-0(data-aos="fade-left") 
         img(src='@/assets/curso/temas/t2/img9.svg' alt='')
 

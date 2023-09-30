@@ -496,7 +496,7 @@
       .col-lg-10
         .bg-8.tarjeta.p-4
           .row.align-items-center
-            .col-lg-4
+            .col-lg-4.mb-3.mb-lg-0
               img(src='@/assets/curso/temas/t1/img9.svg' alt='')
             .col-lg-8
               h5 Para ambos campos, se observan datos atípicos, por lo que se procederá a eliminarlos, estableciendo un rango en el que solo se permiten los datos que cumplan la condición.
